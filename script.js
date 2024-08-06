@@ -7,11 +7,10 @@ function getRandomColor() {
   return `rgb(${r}, ${g}, ${b})`;
 }
 
-// Cria 256 divs e adiciona ao contêiner
 for (let i = 0; i < 256; i++) {
   const div = document.createElement("div");
   div.dataset.opacity = 0;
-  div.dataset.baseColor = ""; // Inicia sem cor de fundo
+  div.dataset.baseColor = "";
   contDiv.appendChild(div);
 }
 
@@ -21,7 +20,6 @@ selectDiv.forEach((div) => {
     let currentOpacity = parseFloat(div.dataset.opacity);
 
     if (currentOpacity === 0) {
-      // Se for a primeira interação, define a cor base
       div.dataset.baseColor = getRandomColor();
     }
 
@@ -29,7 +27,7 @@ selectDiv.forEach((div) => {
       currentOpacity += 0.2;
       div.dataset.opacity = currentOpacity;
       div.style.backgroundColor = div.dataset.baseColor;
-      div.style.opacity = currentOpacity; // Ajusta a opacidade
+      div.style.opacity = currentOpacity;
     }
   });
 });
@@ -37,8 +35,8 @@ selectDiv.forEach((div) => {
 const btnReset = document.querySelector("#clear");
 btnReset.addEventListener("click", () => {
   selectDiv.forEach((div) => {
-    div.dataset.opacity = 0; // Reseta a opacidade
-    div.style.backgroundColor = ""; // Remove a cor de fundo
-    div.style.opacity = 1; // Reseta a opacidade visualmente
+    div.dataset.opacity = 0;
+    div.style.backgroundColor = "";
+    div.style.opacity = 1;
   });
 });

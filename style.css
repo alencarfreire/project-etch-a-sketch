@@ -18,7 +18,7 @@ body {
 .container div {
   width: 20px;
   height: 20px;
-  background-color: transparent; /* Inicialmente sem cor */
+  background-color: transparent;
   border: 1px solid #ddd;
   transition: background-color 0.3s, opacity 0.3s;
 }
