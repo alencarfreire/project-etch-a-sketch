@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container > div {
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  transition: background-color 0.3s;
+}
+
+.container > div:nth-child(16n + 1) {
+  width: 100%;
+  border: 0;
+  height: 0;
+}
